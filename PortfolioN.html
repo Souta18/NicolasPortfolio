@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nicolas E‑Portfolio</title>
+  <meta name="description" content="E-portfolio of Richard Jason B. Nicolas — projects, resume, and contact">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23357be8'/%3E%3Ctext x='50' y='57' font-size='40' text-anchor='middle' fill='white' font-family='Arial'%3EY%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa7b4; --accent:#36a3ff; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px; --gap:20px; color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071226 0%, #081429 60%); color:#e6eef6}
+    a{color:var(--accent); text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:64px;height:64px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6bc1ff);font-weight:700;color:#042033}
+    h1{margin:0;font-size:clamp(20px,3.2vw,32px)}
+    .nav{display:flex;gap:12px;align-items:center}
+    .btn{padding:8px 12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+
+    main{display:grid;grid-template-columns: 320px 1fr;gap:var(--gap);margin-top:24px}
+    
+    .sidebar{background:linear-gradient(180deg, rgba(255,255,255,0.03), transparent);padding:18px;border-radius:var(--radius);backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,0.03)}
+    .photo{width:100%;height:220px;border-radius:12px;background:linear-gradient(135deg,#3aa7ff,#6d5cff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042033;font-size:28px}
+    .meta{margin-top:14px}
+    .meta p{margin:6px 0;color:var(--muted);font-size:14px}
+    .contact{display:grid;gap:8px;margin-top:12px}
+    .chip{background:var(--card);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+   
+    section.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03);margin-bottom:var(--gap)}
+    .card h2{margin:0 0 12px 0}
+    .resume-grid{display:grid;grid-template-columns:1fr 120px;gap:12px}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .skillbar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+    .skillbar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#6bc1ff)}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){main{grid-template-columns:1fr} .sidebar{order:2}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">RJBN</div>
+        <div>
+          <h1>Richard Jason B. Nicolas</h1>
+          <div style="color:var(--muted);font-size:13px">Back‑end developer • Q/A specialist • Student</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#resume">Resume</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+        <div class="photo">
+          <img src="myself.png" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+        </div>
+        <div class="meta">
+          <h3 style="margin:10px 0 4px 0">Richard Jason B. Nicolas</h3>
+          <p>Computer Science Student at Norzagaray College</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn" href="#contact">Email</a>
+            <a class="btn" href="#projects">Portfolio</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div style="font-size:15px;font-weight:600;margin-bottom:10px;letter-spacing:0.5px">Skills</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🌐</span>
+                <span style="font-size:13px">HTML/CSS</span>
+              </div>
+              <div class="skillbar"><i style="width:40%;background:linear-gradient(90deg,#36a3ff,#6bc1ff)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🟨</span>
+                <span style="font-size:13px">JavaScript</span>
+              </div>
+              <div class="skillbar"><i style="width:5%;background:linear-gradient(90deg,#ffe066,#ffd60a)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">💻</span>
+                <span style="font-size:13px">C++</span>
+              </div>
+              <div class="skillbar"><i style="width:30%;background:linear-gradient(90deg,#00599c,#00cfff)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🖥️</span>
+                <span style="font-size:13px">C# </span>
+              </div>
+              <div class="skillbar"><i style="width:50%;background:linear-gradient(90deg,#512bd4,#6b8cff)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🗄️</span>
+                <span style="font-size:13px">Microsoft SQL</span>
+              </div>
+              <div class="skillbar"><i style="width:30%;background:linear-gradient(90deg,#00758f,#00c3ff)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🔵</span>
+                <span style="font-size:13px">VB.NET</span>
+              </div>
+              <div class="skillbar"><i style="width:20%;background:linear-gradient(90deg,#5c2d91,#b4a7d6)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🟪</span>
+                <span style="font-size:13px">Visual Studio</span>
+              </div>
+              <div class="skillbar"><i style="width:50%;background:linear-gradient(90deg,#68217a,#a074c4)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🐙</span>
+                <span style="font-size:13px">Git/GitHub</span>
+              </div>
+              <div class="skillbar"><i style="width:20%;background:linear-gradient(90deg,#24292e,#6e5494)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🛢️</span>
+                <span style="font-size:13px">MySQL</span>
+              </div>
+              <div class="skillbar"><i style="width:20%;background:linear-gradient(90deg,#00758f,#f29111)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🧩</span>
+                <span style="font-size:13px">Problem Solving</span>
+              </div>
+              <div class="skillbar"><i style="width:20%;background:linear-gradient(90deg,#00b894,#00cec9)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">⏰</span>
+                <span style="font-size:13px">Time Management</span>
+              </div>
+              <div class="skillbar"><i style="width:20%;background:linear-gradient(90deg,#fdcb6e,#e17055)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">💬</span>
+                <span style="font-size:13px">Communication</span>
+              </div>
+              <div class="skillbar"><i style="width:50%;background:linear-gradient(90deg,#00b894,#0984e3)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🤝</span>
+                <span style="font-size:13px">Teamwork</span>
+              </div>
+              <div class="skillbar"><i style="width:40%;background:linear-gradient(90deg,#6c5ce7,#00b894)"></i></div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:7px">
+                <span style="font-size:18px">🔄</span>
+                <span style="font-size:13px">Adaptability</span>
+              </div>
+              <div class="skillbar"><i style="width:40%;background:linear-gradient(90deg,#fdcb6e,#00b894)"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <div>
+        <section id="about" class="card">
+          <h2>About</h2>
+          <p>
+            Hello – I'm <strong>Richard Jason B. Nicolas</strong>, 19 years old. I was born on December 8, 2005, in Bocaue, Bulacan and I live in Norzagaray, Bulacan. I'm shy person, sometimes quiet, sometimes loud, and a good listener. My hobbies include reading manga, watching anime, building Lego, and online gaming. I can sing, but not that well.
+          </p>
+        </section>
+
+        <section id="projects" class="card">
+          <h2>Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <h3>Gateway By Zero One (Attendance System) (QR)</h3>
+              <p style="color:var(--muted);font-size:13px">As a member of this project we created a desktop application for scanning student IDs and recording attendance.</p>
+              <p style="font-size:13px;margin-top:8px">Tech: C#, MySQL.</p>
+            </article>
+
+            <article class="project">
+              <h3>Patisserie Bakery (Inventory System)</h3>
+              <p style="color:var(--muted);font-size:13px">As a leader of this project me and my team members we created a desktop inventory management system for tracking products, stock, and transactions.</p>
+              <p style="font-size:13px;margin-top:8px">Tech: C#, Microsoft SQL Server.</p>
+            </article>
+
+            <article class="project">
+              <h3>Pizzaria (Ordering System)</h3>
+              <p style="color:var(--muted);font-size:13px">As a leader of this project me and my duo we created a desktop ordering system for a pizza shop, allowing customers to place and manage orders efficiently.</p>
+              <p style="font-size:13px;margin-top:8px">Tech: C++.</p>
+            </article>
+
+            <article class="project">
+              <h3>NC Canteen (Ordering System)</h3>
+              <p style="color:var(--muted);font-size:13px">As a member of this project we created a canteen ordering system developed to streamline food orders and transactions within the school canteen.</p>
+              <p style="font-size:13px;margin-top:8px">Tech: VB.NET, Microsoft SQL Server.</p>
+            </article>
+
+            <article class="project">
+              <h3>Nicolas E-Portfolio (Portfolio Website)</h3>
+              <p style="color:var(--muted);font-size:13px">This site created by me is a single-file HTML/CSS portfolio you can host anywhere.</p>
+              <p style="font-size:13px;margin-top:8px">Tech: HTML, CSS, vanilla JS.</p>
+            </article>
+
+          </div>
+        </section>
+
+        <section id="resume" class="card">
+          <h2>Resume</h2>
+          <div class="resume-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px 32px; align-items: flex-start; margin-bottom: 0;">
+            <div style="padding-right:24px;">
+              <h3 style="margin-top:0;margin-bottom:10px;">Education</h3>
+              <ul style="color:var(--muted);font-size:13px;margin:6px 0 0 18px;padding:0;list-style:disc;">
+                <li><strong>B.S. Computer Science</strong> - Norzagaray College (2024 - Present)</li>
+                <li><strong>Senior High School</strong> - Nuestra Señora del Carmen Institute, Inc. (2022 - 2024)</li>
+                <li><strong>Junior High School</strong> - Nuestra Señora del Carmen Institute, Inc. (2018 - 2021)</li>
+                <li><strong>Elementary School</strong> - Norzagaray Adventist Elementary School, Inc. (2012 - 2017)</li>
+              </ul>
+              <h3 style="margin-top:18px;margin-bottom:10px;color:#fff;">Contact</h3>
+              <p style="color:var(--muted);font-size:13px;margin:6px 0 0 0;">
+                📞 09771142524<br>
+                📧 richardsonnicolas184@gmail.com
+              </p>
+            </div>
+            <div style="padding-left:24px;">
+              <h3 style="margin-top:0;margin-bottom:10px;">Languages</h3>
+              <p style="color:var(--muted);font-size:13px;margin:6px 0 0 0;">
+                Filipino & English
+              </p>
+              <h3 style="margin-top:18px;margin-bottom:10px;">Interests</h3>
+              <ul style="color:var(--muted);font-size:13px;margin:6px 0 0 18px;padding:0;list-style:disc;">
+                <li>Open source</li>
+                <li>AI</li>
+                <li>Web development</li>
+                <li>Game development</li>
+                <li>Online gaming</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="card">
+          <h2>Contact</h2>
+          <p style="color:var(--muted);">Want to work together or ask a question? Send a message below.</p>
+          <form id="contactForm" onsubmit="handleSubmit(event)" style="display:grid;gap:8px;max-width:640px">
+            <input id="name" name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+            <input id="email" name="email" type="email" placeholder="you@example.com" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn" type="submit">Send Message</button>
+              <button type="button" class="btn" onclick="copyEmail()">Copy Email</button>
+            </div>
+            <div id="formMsg" style="color:var(--muted);font-size:13px"></div>
+          </form>
+        </section>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      document.getElementById('formMsg').textContent = 'Thanks, ' + name + '! This won\'t actually send messages.';
+      document.getElementById('contactForm').reset();
+    }
+    function copyEmail(){
+      navigator.clipboard?.writeText('richardsonnicolas184@gmail.com');
+      document.getElementById('formMsg').textContent = 'Email copied to clipboard.';
+    }
+   
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); }));
+  </script>
+</body>
+</html>
